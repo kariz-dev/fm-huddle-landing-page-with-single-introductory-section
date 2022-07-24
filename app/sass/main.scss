@@ -1,0 +1,119 @@
+// import font family
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+
+// import scss
+@import 'variables';
+
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    line-height: 1.4;
+    overflow-x: hidden;
+
+    background-color: $Violet;
+    background-image: url(../../images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+// ////////////////////////////////////////////////////////////////////////////
+
+.container {
+    max-width: 296px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header {
+    margin-top: 38.2px;
+
+    &_logo {
+        width: 120px;
+        height: auto;
+    }
+}
+
+.main {
+    margin-top: 60px;
+    margin-bottom: 64px;
+
+    &_content {
+        text-align: center;
+        &_img {
+            width: 296px;
+            height: auto;
+        }
+
+        &_title {
+            font-family: $font-family-secondary;
+            font-weight: $font-weight-bold;
+            font-size: 24px;
+            color: #fff;
+            text-transform: capitalize;
+            line-height: 36px;
+        }
+
+        &_desc {
+            font-family: $font-family-primary;
+            font-weight: $font-weight-normal;
+            font-size: 16px;
+            color: #fff;
+            
+            margin-bottom: 40px;
+        }
+
+        &_btn {
+            text-decoration: none;
+            color: $Violet;
+            font-family: $font-family-secondary;
+            background-color: #fff;
+            padding: 12px 75px;
+            border-radius: 50px;
+            box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.269022);
+
+            &:hover {
+                background-color: #FF52C1;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.footer {
+    text-align: center;
+
+    &_social {
+        &_icon {
+            margin-right: 10px;
+            width: 10px;
+            height: 10px;
+            text-decoration: none;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            .fa-brands {
+                color: #fff;
+                padding: 10px;
+                border: 1px solid #fff;
+                border-radius: 50%;
+
+                &:hover {
+                    border: 1px solid #FF52C1;
+                    color: #FF52C1;
+                }
+            }
+        }
+    }
+}

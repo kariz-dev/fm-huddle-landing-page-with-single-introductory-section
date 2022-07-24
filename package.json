@@ -1,0 +1,24 @@
+{
+  "name": "huddle-landing-page-with-single-introductory-section",
+  "version": "1.0.0",
+  "description": "Challenge FrontEnd Mentor #1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kariz-dev/huddle-landing-page-with-single-introductory-section.git"
+  },
+  "keywords": [
+    "Front",
+    "End",
+    "Mentor"
+  ],
+  "author": "Kariz Dev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kariz-dev/huddle-landing-page-with-single-introductory-section/issues"
+  },
+  "homepage": "https://github.com/kariz-dev/huddle-landing-page-with-single-introductory-section#readme"
+}
