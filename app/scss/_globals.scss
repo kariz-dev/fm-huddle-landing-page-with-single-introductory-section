@@ -7,6 +7,8 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -16,92 +18,172 @@ body {
   overflow-x: hidden;
 
   background-color: $Violet;
-  background-image: url("../../images/bg-mobile.svg");
+  background-image: url("../../images/bg-desktop.svg");
   background-repeat: no-repeat;
   background-size: cover;
-}
+  background-position-x: center;
 
-.container {
-  max-width: 296px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.header {
-  padding-top: 38.2px;
-
-  &_logo {
-    width: 120px;
-    height: auto;
+  @include media("mobile") {
+    background-image: url("../../images/bg-mobile.svg");
+    background-size: contain;
   }
 }
 
+a.btn {
+  display: inline-block;
+  padding: 13px 63px 16px 64px;
+  background: #fff;
+  border-radius: 28px;
+  box-shadow: 2px 4px 9px 3px rgba(0, 0, 0, 0.26);
+
+  color: $Violet;
+  text-align: center;
+  font-size: 18px;
+  font-family: Poppins;
+  line-height: 27px;
+  text-decoration: none;
+  cursor: pointer;
+
+  @include media("mobile") {
+    padding: 12px 0 11px 0;
+    margin: 0 52px;
+    display: block;
+
+    font-size: 14px;
+    font-weight: $font-weight-normal;
+  }
+
+  &:hover {
+    background: $SoftMagenta;
+    color: #fff;
+  }
+}
+
+// Nav
+.logo {
+  max-width: 1280px;
+  margin: 64px auto 0;
+
+  @include media("mobile") {
+    max-width: 304px;
+    margin: 38px auto 0;
+  }
+
+  &-img {
+    width: 200px;
+    height: auto;
+
+    @include media("mobile") {
+      width: 120px;
+    }
+  }
+}
+
+// Main
 .main {
-  margin-top: 69px;
+  max-width: 1280px;
+  margin: 104px auto 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 59px;
 
-  &_image {
-    width: 296px;
-    height: auto;
+  @include media("mobile") {
+    max-width: 304px;
+    margin: 78px auto 64px;
+    flex-direction: column;
+    gap: 60px;
   }
 
-  &_content {
-    margin-top: 60px;
-    text-align: center;
+  &-img {
+    width: 696px;
+    height: 493px;
 
-    &_heading {
+    @include media("mobile") {
+      width: 296px;
+      height: 209px;
+    }
+  }
+
+  &-content {
+    padding-top: 44px;
+
+    @include media("mobile") {
+      padding-top: 0;
+    }
+
+    &-title {
       @include heading-font-bold;
       color: #fff;
-      font-size: 24px;
-      line-height: 36px;
+      font-size: 40px;
+      line-height: 60px;
+      margin-bottom: 24px;
+
+      @include media("mobile") {
+        font-size: 24px;
+        line-height: 36px;
+        text-align: center;
+        margin-bottom: 16px;
+      }
     }
 
-    &_paragraph {
-      @include font-body;
-      color: #fff;
-      font-size: 16px;
-      line-height: 24px;
-      margin-bottom: 35px;
-    }
-
-    &_button {
-      padding: 12px 75px;
-      background-color: #fff;
-      border: none;
-      border-radius: 35px;
-      color: $Violet;
-      text-decoration: none;
+    &-desc {
       @include heading-font-normal;
-      font-size: 12px;
+      color: #fff;
+      font-size: 18px;
+      line-height: 27px;
+      margin-bottom: 24px;
+      padding-right: 12px;
+
+      @include media("mobile") {
+        text-align: center;
+        font-size: 16px;
+        line-height: 24px;
+        padding-right: 0;
+      }
     }
   }
 }
 
+// Footer
 .footer {
-  margin-top: 35px;
-  &_social {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    color: #fff;
+  width: 1280px;
+  margin: 0 auto;
 
-    .fa-brands {
-      font-size: 24px;
-      border: 1px solid #fff;
-      padding: 8px;
+  @include media("mobile") {
+    max-width: 304px;
+    margin: 0 auto 40px;
+  }
+
+  &-socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 16px;
+
+    @include media("mobile") {
+      justify-content: center;
+    }
+
+    &-icon {
+      border: 2px solid #fff;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       border-radius: 50%;
+
+      &:hover {
+        border: 2px solid $SoftMagenta;
+      }
+
+      i.fab {
+        color: #fff;
+
+        &:hover {
+          color: $SoftMagenta;
+        }
+      }
     }
   }
 }
-
-// Visibility
-// .hide-for-mobile {
-//   @include breakpoint-down(medium) {
-//     display: none;
-//   }
-// }
-
-// .hide-for-desktop {
-//   @include breakpoint-up(large) {
-//     display: none;
-//   }
-// }
