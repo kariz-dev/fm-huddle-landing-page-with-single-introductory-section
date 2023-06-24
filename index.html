@@ -1,63 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Huddle Landing Page With Single Introduction Section</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-    <link rel="stylesheet" href="dist/css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body>
-    <!-- #header -->
-    <header id="header" class="header container">
-      <img src="./images/object.svg" alt="Logo" class="header_logo" />
-    </header>
-    <!-- /#header -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Huddle landing page with single introductory section</title>
 
-    <!-- #main -->
-    <main id="main" class="main container">
-      <img
-        class="main_image"
-        src="./images/illustration-mockups.svg"
-        alt="illustration-mockups"
-        class="main_img"
-      />
-      <div class="main_content">
-        <h1 class="main_content_heading">
-          Build the community you fans will love
-        </h1>
-        <p class="main_content_paragraph">
-          Huddle re-imagines the way we build communities. You have a voice, but
-          so does your audience. Create connections with your users as you
-          engage in genuine discussion.
-        </p>
-        <a href="#" class="main_content_button">Register</a>
-      </div>
-    </main>
-    <!-- /#main -->
+  <!-- icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 
-    <!-- #footer -->
-    <footer id="footer" class="footer">
-      <div class="footer_social">
-        <a href="#" class="footer_social_icon">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="#" class="footer_social_icon">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="#" class="footer_social_icon">
-          <i class="fab fa-instagram"></i>
-        </a>
-      </div>
-    </footer>
-    <!-- /#footer -->
-  </body>
+  <!-- style -->
+  <link rel="stylesheet" href="/dist/css/style.css">
+</head>
+<body>
+
+  <nav class="logo">
+    <img src="/images/logo.svg" alt="logo" class="logo-img">
+  </nav>
+
+  <main id="main">
+    <img src="/images/illustration-mockups.svg" alt="illustration-mockups" class="main-img">
+    <div class="main-content">
+      <h1 class="main-content-title">Build The Community Your Fans Will Love</h1>
+      <p class="main-content-desc">Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion. </p>
+      <a href="#" class="btn">Register</a>
+    </div>
+  </main>
+
+  <footer class="socials">
+    <a href="#" class="footer_social_icon">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="#" class="footer_social_icon">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="#" class="footer_social_icon">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </footer>
+  
+</body>
 </html>
